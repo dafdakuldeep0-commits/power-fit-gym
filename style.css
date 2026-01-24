@@ -30,15 +30,22 @@ nav a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: url('https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg') center/cover no-repeat;
+  text-align: center;
 }
-
+.hero p {
+  margin: 10px 0 20px;
+  font-size: 20px;
+}
 .hero button {
   padding: 12px 25px;
   font-size: 18px;
-  background: red;
+  background: #ff0000;
   color: white;
   border: none;
   cursor: pointer;
+  border-radius: 8px;
+}
 }
 
 .plans {
