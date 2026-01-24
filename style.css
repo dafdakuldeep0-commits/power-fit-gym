@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: white;
+}
+
+nav {
+  background: black;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero button {
+  padding: 12px 25px;
+  font-size: 18px;
+  background: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.plans {
+  padding: 40px;
+  text-align: center;
+}
+
+.card {
+  background: #222;
+  margin: 15px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.contact {
+  padding: 30px;
+  background: black;
+  text-align: center;
+}
