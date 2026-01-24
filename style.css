@@ -102,3 +102,18 @@ nav a {
   cursor: pointer;
   border-radius: 8px;
 }
+.footer {
+  padding: 20px;
+  background: #000;
+  text-align: center;
+}
+
+.footer .social {
+  margin-top: 10px;
+}
+
+.footer .social a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
