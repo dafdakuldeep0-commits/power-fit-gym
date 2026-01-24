@@ -92,3 +92,13 @@ nav a {
   background: black;
   text-align: center;
 }
+
+.contact button {
+  padding: 12px 25px;
+  font-size: 18px;
+  background: #25D366;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
