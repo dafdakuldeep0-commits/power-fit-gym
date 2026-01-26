@@ -175,3 +175,23 @@ nav a {
 .popular {
   border: 2px solid #f39c12;
 }
+.trainers {
+  padding: 60px 20px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+}
+
+.trainer-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.trainer {
+  background: #1c1c1c;
+  padding: 25px;
+  width: 220px;
+  border-radius: 10px;
+}
