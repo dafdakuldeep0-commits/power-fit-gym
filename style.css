@@ -117,3 +117,61 @@ nav a {
   margin: 0 10px;
   text-decoration: none;
 }
+.pricing {
+  padding: 60px 20px;
+  background: #111;
+  color: #fff;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.pricing-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.plan {
+  background: #1c1c1c;
+  padding: 25px;
+  width: 280px;
+  border-radius: 10px;
+}
+
+.plan h3 {
+  font-size: 24px;
+}
+
+.price {
+  font-size: 22px;
+  margin: 15px 0;
+  color: #f39c12;
+}
+
+.plan ul {
+  list-style: none;
+  padding: 0;
+}
+
+.plan ul li {
+  margin: 10px 0;
+}
+
+.plan button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  background: #f39c12;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.popular {
+  border: 2px solid #f39c12;
+}
