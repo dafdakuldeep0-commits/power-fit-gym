@@ -179,3 +179,22 @@ body {
   margin: auto;
   padding: 20px;
 }
+ section {
+  padding: 60px 0;
+}
+
+h1, h2, h3 {
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+. hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
