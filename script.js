@@ -11,13 +11,3 @@ if (joinBtn) {
     alert("Welcome to Power Fit Gym 💪🔥");
   });
 }
-
-// Navbar links (demo)
-const navLinks = document.querySelectorAll("nav a");
-
-navLinks.forEach(link => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
-    alert("Section coming soon 🚧");
-  });
-});
