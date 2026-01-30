@@ -1,71 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Power Fit Gym</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Power Fit Gym (Demo)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* Basic reset */
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif}
+body{background:#0f0f0f;color:#fff;scroll-behavior:smooth}
+
+/* NAVBAR */
+nav{
+  position:fixed;top:0;left:0;width:100%;
+  padding:15px 20px;
+  display:flex;justify-content:space-between;align-items:center;
+  background:rgba(0,0,0,.4);transition:.4s;z-index:10
+}
+nav.scrolled{background:#000}
+nav h2{color:#ffcc00}
+nav a{color:#fff;text-decoration:none;margin-left:20px;font-weight:bold}
+nav a:hover{color:#ffcc00}
+
+/* HERO */
+header{
+  height:100vh;
+  background:#111;
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  padding:20px;
+}
+header h1{font-size:50px;color:#ffcc00}
+header p{margin:10px 0;font-size:20px}
+.btn{
+  padding:12px 35px;background:#ffcc00;color:#000;
+  text-decoration:none;border-radius:30px;font-weight:bold;
+}
+.btn:hover{opacity:.9}
+
+/* Section */
+section{padding:80px 20px;text-align:center}
+section h2{color:#ffcc00;margin-bottom:25px}
+
+/* Cards */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+.card{
+  background:#1c1c1c;
+  padding:25px;
+  border-radius:12px;
+  opacity:0;
+  transform:translateY(30px);
+  transition:.6s;
+}
+.card.show{opacity:1;transform:translateY(0)}
+.card h3{color:#ffcc00;margin-bottom:10px}
+
+/* Pricing */
+.pricing{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+}
+.price{
+  background:#1c1c1c;
+  padding:25px;
+  border-radius:12px;
+  text-align:left;
+}
+.price h3{color:#ffcc00;margin-bottom:10px}
+.price ul{margin:15px 0;list-style:none}
+.price ul li{margin:8px 0}
+.price button{
+  width:100%;
+  padding:12px;
+  border:none;
+  background:#ffcc00;
+  color:#000;
+  font-weight:bold;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+/* Trainers */
+.trainer{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+}
+.trainer-card{
+  background:#1c1c1c;
+  padding:25px;
+  border-radius:12px;
+  text-align:left;
+}
+.trainer-card h3{color:#ffcc00;margin:10px 0}
+.trainer-card p{color:#ccc}
+
+/* Testimonials */
+.testimonial{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+.test-card{
+  background:#1c1c1c;
+  padding:25px;
+  border-radius:12px;
+  text-align:left;
+  opacity:0;
+  transform:translateY(30px);
+  transition:.6s;
+}
+.test-card.show{opacity:1;transform:translateY(0)}
+.test-card p{color:#ccc; margin:12px 0}
+
+/* Form */
+form{
+  max-width:420px;
+  margin:0 auto;
+  background:#1c1c1c;
+  padding:25px;
+  border-radius:12px;
+}
+form input, form select{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border:none;
+  border-radius:6px;
+}
+form button{
+  width:100%;
+  padding:12px;
+  border:none;
+  background:#ffcc00;
+  font-weight:bold;
+  cursor:pointer;
+}
+.error{color:#ff5555;font-size:14px}
+.success{color:#00ff99;margin-top:10px}
+
+/* Footer */
+footer{
+  background:#000;
+  padding:20px;
+  text-align:center;
+  font-size:14px;
+}
+.demo-text{color:#aaa;font-size:13px;margin-top:8px}
+</style>
 </head>
+
 <body>
 
-  <!-- Header -->
-  <header class="header">
-    <div class="container">
-      <h2 class="logo">Power Fit Gym</h2>
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+<!-- NAVBAR -->
+<nav id="navbar">
+  <h2>Power Fit Gym</h2>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#trainers">Trainers</a>
+    <a href="#join">Join</a>
+  </div>
+</nav>
 
-  <!-- Hero -->
-  <section id="home" class="hero">
-    <div class="container hero-content">
-      <img src="https://via.placeholder.com/500" alt="Gym Image">
-      <h1>Build Your Body</h1>
-      <p>Start your fitness journey with Power Fit Gym</p>
-      <button class="btn" type="button">Join Now</button>
-    </div>
-  </section>
+<!-- HERO -->
+<header id="home">
+  <div>
+    <h1>POWER FIT GYM</h1>
+    <p>Professional Demo Gym Website</p>
+    <a href="#services" class="btn">Explore</a>
+  </div>
+</header>
 
-  <!-- About -->
-  <section id="about">
-    <div class="container about">
-      <img src="https://via.placeholder.com/400" alt="Workout">
-      <div>
-        <h2>Why Choose Us?</h2>
-        <p>
-          Modern equipment, expert trainers and a motivating environment to help
-          you reach your fitness goals.
-        </p>
-      </div>
-    </div>
-  </section>
+<!-- SERVICES -->
+<section id="services">
+  <h2>Services</h2>
+  <div class="grid">
+    <div class="card"><h3>Weight Training</h3><p>Strength & muscle building</p></div>
+    <div class="card"><h3>Cardio Zone</h3><p>Fat loss & stamina</p></div>
+    <div class="card"><h3>Personal Training</h3><p>One-on-one coaching</p></div>
+    <div class="card"><h3>Diet Guidance</h3><p>Nutrition plan (demo)</p></div>
+  </div>
+</section>
 
-  <!-- Gallery -->
-  <section id="gallery">
-    <div class="container gallery">
-      <img src="https://via.placeholder.com/300" alt="Equipment">
-      <img src="https://via.placeholder.com/300" alt="Training">
-      <img src="https://via.placeholder.com/300" alt="Gym">
+<!-- PRICING -->
+<section id="pricing">
+  <h2>Pricing (Demo)</h2>
+  <div class="pricing">
+    <div class="price">
+      <h3>1 Month</h3>
+      <ul>
+        <li>Gym Access</li>
+        <li>Free Consultation</li>
+        <li>Basic Plan</li>
+      </ul>
+      <button onclick="alert('Demo: Plan selected')">Choose</button>
     </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <div class="container contact">
-      <h2>Contact Us</h2>
-      <p>Call / WhatsApp: +91 12345 67890</p>
+    <div class="price">
+      <h3>3 Months</h3>
+      <ul>
+        <li>Gym Access</li>
+        <li>Diet Guidance</li>
+        <li>Training Plan</li>
+      </ul>
+      <button onclick="alert('Demo: Plan selected')">Choose</button>
     </div>
-  </section>
+    <div class="price">
+      <h3>1 Year</h3>
+      <ul>
+        <li>Full Access</li>
+        <li>Personal Coach</li>
+        <li>Advanced Plan</li>
+      </ul>
+      <button onclick="alert('Demo: Plan selected')">Choose</button>
+    </div>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>© 2026 Power Fit Gym. All Rights Reserved.</p>
-  </footer>
+<!-- TRAINERS -->
+<section id="trainers">
+  <h2>Trainers</h2>
+  <div class="trainer">
+    <div class="trainer-card"><h3>Trainer A</h3><p>Strength Coach</p></div>
+    <div class="trainer-card"><h3>Trainer B</h3><p>Cardio Coach</p></div>
+    <div class="trainer-card"><h3>Trainer C</h3><p>Nutrition Coach</p></div>
+  </div>
+</section>
+
+<!-- JOIN FORM -->
+<section id="join">
+  <h2>Join Now</h2>
+  <form onsubmit="return joinGym()">
+    <input type="text" id="name" placeholder="Full Name">
+    <div id="nameErr" class="error"></div>
+
+    <input type="tel" id="phone" placeholder="Phone Number">
+    <div id="phoneErr" class="error"></div>
+
+    <select id="plan">
+      <option value="">Select Plan</option>
+      <option>1 Month</option>
+      <option>3 Months</option>
+      <option>1 Year</option>
+    </select>
+    <div id="planErr" class="error"></div>
+
+    <button type="submit">Submit</button>
+    <div id="success" class="success"></div>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 Power Fit Gym – Demo Website
+  <div class="demo-text">
+    This is a demo website for learning HTML, CSS & JavaScript only.
+  </div>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+const nav=document.getElementById("navbar");
+
+window.addEventListener("scroll",()=>{
+  window.scrollY>50 ? nav.classList.add("scrolled") : nav.classList.remove("scrolled");
+});
+
+/* Scroll animation for cards */
+const cards=document.querySelectorAll(".card, .test-card");
+window.addEventListener("scroll",()=>{
+  cards.forEach(card=>{
+    const top=card.getBoundingClientRect().top;
+    if(top<window.innerHeight-100){
+      card.classList.add("show");
+    }
+  });
+});
+
+/* Form validation */
+function joinGym(){
+  let ok=true;
+  let name=document.getElementById("name").value.trim();
+  let phone=document.getElementById("phone").value.trim();
+  let plan=document.getElementById("plan").value;
+
+  document.getElementById("nameErr").innerHTML="";
+  document.getElementById("phoneErr").innerHTML="";
+  document.getElementById("planErr").innerHTML="";
+  document.getElementById("success").innerHTML="";
+
+  if(name===""){document.getElementById("nameErr").innerHTML="Name required";ok=false}
+  if(phone.length!==10){document.getElementById("phoneErr").innerHTML="10 digit number required";ok=false}
+  if(plan===""){document.getElementById("planErr").innerHTML="Select a plan";ok=false}
+
+  if(ok){
+    document.getElementById("success").innerHTML="✅ Thanks! We will contact you soon.";
+  }
+  return false;
+}
+</script>
 
 </body>
-</html>
+</html/>
